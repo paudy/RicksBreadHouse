@@ -1,0 +1,113 @@
+call 打怪加令()
+
+Function 打怪加令()
+
+  Dim 大令个数 = 120
+  For i = 0 to 大令个数
+	加行军令()
+	内政打怪() 
+  Next
+
+End Function
+
+Function 加行军令()
+
+	Print "SGZ-2017 加行军令 "
+	Delay 100
+	Print "打开背包"
+	Delay 200
+	 TouchDownEvent 102,449,0
+	Delay 385
+	 TouchUpEvent 0
+	Delay 1268
+	 TouchDownEvent 159,171,0  //使用物品（默认置顶第一项，行军令）
+	Delay 500
+	 TouchUpEvent 0
+	Delay 1311
+	 TouchDownEvent 394,342,0
+	Delay 535
+	 TouchUpEvent 0
+	Delay 1317
+	 TouchDownEvent 1195,692,0   //关闭背包
+	Delay 326
+	 TouchUpEvent 0
+	Delay 1357
+
+	
+End Function
+
+Function 内政打怪()
+
+	TracePrint "打怪5轮"
+	For i = 1 to 5
+
+		寻怪()
+		
+		Delay 200
+		//延时等待
+		Dim rd 
+		Randomize
+		rd =int(((8-1+1)*rnd())+1)
+		
+		if (i=1 or i = 2 or i=4 or i=5) then 重启内政()
+		if ((i=3 ) and (rd<4) ) then 重启内政()
+
+		Delay 40000 + rd
+		
+	Next
+
+End Function
+
+
+Function 寻怪()
+		
+		TracePrint "寻怪"
+		//搜寻马贼
+		Delay 100
+		 TouchDownEvent 1217,687,0
+		Delay 100
+		 TouchUpEvent 0
+		Delay 800	
+		 TouchDownEvent 349,524,0
+		Delay 800
+		 TouchUpEvent 0
+		Delay 2000
+				 
+		//搜寻黄巾军
+		TouchMoveEvent 1217,680,0,54
+      Delay 400
+		 TouchDownEvent 1217,687,0
+		Delay 600
+		 TouchUpEvent 0
+		 TouchDownEvent 856,524,0
+		Delay 500
+		 TouchUpEvent 0
+		Delay 2000
+		
+End Function
+
+
+Function 重启内政()
+	
+	TracePrint "重启内政"
+	Delay 1000
+	 TouchDownEvent 1064,554,0  //打开内政界面
+	Delay 200
+	 TouchUpEvent 0
+	Delay 800
+	 TouchDownEvent 442,406,0 //停止内政
+	TouchMoveEvent 440,406,0,54
+
+	Delay 300
+	 TouchUpEvent 0
+	Delay 1000
+	 TouchDownEvent 1070,560,0
+	Delay 200
+	 TouchUpEvent 0
+	Delay 800
+	 TouchDownEvent 186,364,0   //开启内政
+	Delay 200
+	 TouchUpEvent 0
+	Delay 1200
+	
+End Function
