@@ -43,7 +43,7 @@ footer-links:
   email: llong87@163.com
   facebook:
   flickr:
-  github: zdleek 
+  github: paudy 
   googleplus: # anything in your profile username that comes after plus.google.com/
   instagram:
   linkedin:
@@ -55,7 +55,7 @@ footer-links:
   youtube:
 
 # Text under the icons in footer
-footer-text: Copyright (c) 2019 lemon
+footer-text: Copyright (c) 2022 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -63,10 +63,10 @@ disqus: # fromendworld
 
 # Gitalk
 gitalk:
-  clientID: bd65d5c0df878155b7fa
-  clientSecret: d0220762c05c2d6b6f6152a0f0e4b6b090de9729
-  repo: lemonchann.github.io
-  owner: lemonchann
+  clientID: 
+  clientSecret: 
+  repo: paudy.github.io
+  owner: paudy
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 #google_analytics: 
@@ -80,7 +80,7 @@ url: https://paudy.github.io
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
 # baseurl: 
-
+baseurl: https://paudy.github.io/RicksBreadHouse
 #
 # !! You don't need to change any of the configuration flags below !!
 #
